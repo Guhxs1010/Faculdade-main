@@ -1,0 +1,18 @@
+div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    border-radius: 100px;
+    animation: minhaAnimacao 10s linear 1s infinite alternate;
+}
+
+@keyframes minhaAnimacao {
+    0% {left:0; top:0;}
+    25% {left:0; top:100%;}
+    50% {left:100%; top:0;}
+    75% {left:40%; top:100%;}
+    100% {left:100%; top:40%;}
+}

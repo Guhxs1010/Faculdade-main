@@ -1,0 +1,18 @@
+div {
+    width: 400px;
+    height: 200px;
+    background-color: #fff;
+    /* chrome e safari */
+    background: -webkit-repeating-linear-gradient(0deg, green, red 20%, yellow 30%);
+    /* opera */
+    background: -o-repeating-linear-gradient(0deg, green, red 20%, yellow 30%);
+    /* firefox */
+    background: -moz-repeating-linear-gradient(0deg, green, red 20%, yellow 30%);
+}
+
+.outrodiv {
+    width: 400px;
+    height: 400px;
+    background-color: #fff;
+    background: -webkit-repeating-radial-gradient(yellow, blue, green 25%);
+}

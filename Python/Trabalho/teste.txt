@@ -1,0 +1,7 @@
+ctx = execjs.compile("""
+  function multiply(a, b) {
+    return a * b;
+  }
+""")
+
+result = ctx.call("multiply", 5, 6)

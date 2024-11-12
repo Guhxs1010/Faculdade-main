@@ -1,0 +1,29 @@
+div {
+    border: 2px solid #000;
+    position: absolute;
+}
+
+.um {
+    width: 200px;
+    height: 200px;
+    background-color: #cff;
+    z-index: 3;
+}
+
+.dois {
+    width: 200px;
+    height: 200px;
+    background-color: #6f9;
+    top: 100px;
+    left: 100px;
+    z-index: 2;
+}
+
+.tres {
+    width: 200px;
+    height: 200px;
+    background-color: #fcf;
+    top: 200px;
+    height: 200px;
+    z-index: 1;
+}

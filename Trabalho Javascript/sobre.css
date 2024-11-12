@@ -1,0 +1,163 @@
+/* Estrutura de minização e adaptação vizual do site para celular: */
+
+@media screen and (max-width: 760px){
+    header{
+        flex-direction: column;
+    }
+    main{
+        flex-direction: column;
+    }
+    h2{
+        font-size: 38px;
+    }
+    form{
+        margin: 0 auto;
+        width: 100%;
+    }
+    input{
+        align-self: center;
+    }
+    img{
+        display: none;
+    }
+    ul{
+        text-align: center;
+    }
+}
+body{
+    background-color: rgb(34,34,34);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+/* Estilo para o conteúdo da seção "Sobre" */
+.sobre {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Títulos principais */
+.sobre h1 {
+    color: #1E90FF; /* Azul para destaque */
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px; /* Aumentado o espaço abaixo do título principal */
+}
+
+/* Subtítulos */
+.sobre h2 {
+    color: #1E90FF;
+    font-size: 1.5em;
+    margin-top: 30px; /* Aumentado o espaço acima do subtítulo */
+    margin-bottom: 15px; /* Espaço abaixo do subtítulo */
+}
+
+/* Parágrafos */
+.sobre p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin: 15px 0; /* Aumentado o espaço entre os parágrafos */
+}
+
+/* Estilos para links */
+a {
+    color: #1E90FF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* Estrutura padrão do navegador e conteudo */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#title{
+    flex-direction: column;
+    line-height: 10px;
+}
+li{
+    display: inline-block;
+    margin: 20px;
+}
+a{
+    color: white;
+    
+}
+a:hover{
+    color: royalblue;
+    transition: 0.3s all;
+}
+
+body{
+    background-color: rgb(34,34,34);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* rodape */
+footer {
+    background-color: royalblue;
+    text-align: center;
+    padding: 20px;
+    margin: 10%;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.nome h1 {
+    font-weight: 200;
+    margin: 0;
+}
+
+.pessoa{
+    display: flex;
+    justify-content: center;
+}
+ul a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+ul a:hover {
+    color: royalblue;
+}
+
+ul a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: royalblue;
+    transition: width 0.3s ease;
+}
+
+ul a:hover::after {
+    width: 100%;
+}

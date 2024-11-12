@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h2, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style-02.css">
+</head>
+<body>
+    <h2>Tabela do Excel</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Valor 1</th>
+                <th>Operação</th>
+                <th>Valor 2</th>
+                <th>Resultado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text" id="sub1"></td>
+                <td>-</td>
+                <td><input type="text" id="sub2"></td>
+                <td><input type="text" id="result_sub"></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="sum1"></td>
+                <td>+</td>
+                <td><input type="text" id="sum2"></td>
+                <td><input type="text" id="result_sum"></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="plus1"></td>
+                <td>*</td>
+                <td><input type="text" id="plus2"></td>
+                <td><input type="text" id="result_plus"></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="div1"></td>
+                <td>/</td>
+                <td><input type="text" id="div2"></td>
+                <td><input type="text" id="result_div"></td>
+            </tr>
+        </tbody>
+    </table>
+    <button id="calculateButton" onclick="calculate()">Calcular</button>
+    <script src="script.js"></script>
+</body>
+</html>

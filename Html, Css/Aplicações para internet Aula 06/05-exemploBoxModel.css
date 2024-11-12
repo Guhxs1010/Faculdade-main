@@ -1,0 +1,17 @@
+h1 {
+    background-color: blueviolet;
+    color: white;
+    width: 300px;
+    text-align: center;
+    padding: 100px;
+    border-left: solid 20px black;
+    border-bottom: double 20px black;
+    margin-left: 150px;
+}
+
+div {
+    background-color: yellowgreen;
+    width: 900px;
+    height: 1500px;
+    padding-top: 150px;
+}
