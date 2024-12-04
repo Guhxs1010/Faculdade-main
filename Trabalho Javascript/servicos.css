@@ -107,12 +107,32 @@ footer {
     border-radius: 8px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s;
+    backdrop-filter: blur(8px); /* Desfoque Gaussiano */
+    transition: transform 0.3s, background-color 0.3s;
+    position: relative;
 }
 
 .remedios:hover, .cosmeticos:hover, .suplementos:hover {
     transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.2);
 }
+
+.btn-comprar {
+    background-color: royalblue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn-comprar:hover {
+    background-color: darkblue;
+}
+
 
 ul a {
     position: relative;
@@ -140,3 +160,131 @@ ul a::after {
 ul a:hover::after {
     width: 100%;
 }
+
+/* Estilo do modal (fixo à direita) */
+#modal-produto {
+    display: none;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: white;
+    padding: 20px;
+    width: 300px; /* Largura do modal */
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    overflow-y: auto; /* Permite rolagem caso o conteúdo ultrapasse a altura do modal */
+  }
+  
+  .modal-conteudo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .modal-conteudo img {
+    width: 60px;
+    border-radius: 8px;
+    margin-right: 15px;
+  }
+  
+  .modal-conteudo .info {
+    flex-grow: 1;
+    padding: 0 10px;
+  }
+  
+  .close {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+    margin-left: 15px;
+  }
+  
+  /* Botões de ação no modal */
+  #finalizar-compra, #cancelar-compra {
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: royalblue;
+    transition: background-color 0.3s;
+  }
+  
+  #finalizar-compra:hover, #cancelar-compra:hover {
+    background-color: darkblue;
+  }
+  
+  /* Estilo para a lista de produtos no carrinho */
+  #carrinho-lista {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-top: 20px;
+  }
+  
+  .carrinho-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .carrinho-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    margin-right: 10px;
+  }
+  
+  .carrinho-info {
+    flex-grow: 1;
+    font-size: 16px;
+  }
+  
+  .remover-item {
+    cursor: pointer;
+    color: red;
+    font-size: 18px;
+    margin-left: 10px;
+  }
+  
+  .fas.fa-trash {
+    font-size: 20px;
+  }
+  
+  /* Estilo para os botões de adicionar e remover quantidade */
+  button.incrementar, button.decrementar {
+    background-color: royalblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px 10px;
+    margin: 5px;
+  }
+  
+  button.incrementar:hover, button.decrementar:hover {
+    background-color: darkblue;
+  }
+  
+  /* Estilo para exibir a quantidade do produto */
+  .carrinho-info p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: royalblue;
+  }
+  
+  button {
+    font-size: 18px;
+  }
+  
+  

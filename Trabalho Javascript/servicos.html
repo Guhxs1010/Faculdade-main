@@ -1,65 +1,84 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="servicos.css" />
-    <script src="app.js"></script>
-    <title>Remedy day</title>
-  </head>
-
-  <body>
-    <!--Estrutura de texto do site: -->
-
-    <header>
-      <!--cabeçalho -->
-      <div id="title">
-        <div class="logo">
-          <div class="img-logo">
-            <img src="imagens/image.png" alt="Logo" style="width: 100px" />
-          </div>
-          <div class="nome">
-            <h1>Remedy Day</h1>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="servicos.css" />
+  <script defer src="modal.js"></script>
+  <title>Remedy Day</title>
+</head>
+<body>
+  <header>
+    <div id="title">
+      <div class="logo">
+        <div class="img-logo">
+          <img src="imagens/image.png" alt="Logo" style="width: 100px" />
+        </div>
+        <div class="nome">
+          <h1>Remedy Day</h1>
         </div>
       </div>
+    </div>
+    <ul>
+      <a href="index.html"><li>Início</li></a>
+      <a href="sobre.html"><li>Sobre</li></a>
+      <a href="contato.html"><li>Contato</li></a>
+      <a href="servicos.html"><li>Serviços</li></a>
+      <a href="login.html" id="Inscreva-se_btr"><li>Já tem a sua conta?</li></a>
+    </ul>
+  </header>
 
-      <ul>
-        <a href="index.html"><li>Inicio</li></a>
-        <a href="sobre.html"><li>Sobre</li></a>
-        <a href="contato.html"><li>Contato</li></a>
-        <a href="servicos.html"><li>Serviços</li></a>
-        <a href="login.html" id="Inscreva-se_btr"
-          ><li>Já tem a sua conta?</li></a
-        >
-      </ul>
-    </header>
+  <div class="titulo">
+    <h1>Nossos Serviços</h1>
+  </div>
 
-      <div class="titulo">
-        <h1>Nossos Serviços</h1>
-      </div>
-
-    <div class="produtos">
-
-      <div class="remedios">
-        <h1>Remédios</h1>
-        <div class="img"><img src="imagens/1e.png" alt="" style="width: 250px;"></div>
-      </div>
-
-      <div class="cosmeticos">
-        <h1>Cosméticos</h1>
-        <div class="img"><img src="imagens/2e.png" alt="" style="width: 250px;"></div>
-      </div>
-
-      <div class="suplementos">
-        <h1>Suplementos</h1>
-        <div class="img"><img src="imagens/3e.png" alt="" style="width: 250px;"></div>
-      </div>
+  <div class="produtos">
+    <div class="remedios" data-nome="Remédios" data-preco="30.00">
+      <h1>Remédios</h1>
+      <div class="img"><img src="imagens/1e.png" alt="" style="width: 250px;"></div>
+      <p>A partir de: R$ 30,00</p>
+      <button class="btn-comprar">Comprar</button>
     </div>
 
-    <footer>
-        <p>&copy; 2024 Remedy-Day. Todos os direitos reservados.</p>
-    </footer>
-  </body>
+    <div class="cosmeticos" data-nome="Cosméticos" data-preco="50.00">
+      <h1>Cosméticos</h1>
+      <div class="img"><img src="imagens/2e.png" alt="" style="width: 250px;"></div>
+      <p>A partir de: R$ 50,00</p>
+      <button class="btn-comprar">Comprar</button>
+    </div>
+
+    <div class="suplementos" data-nome="Suplementos" data-preco="40.00">
+      <h1>Suplementos</h1>
+      <div class="img"><img src="imagens/3e.png" alt="" style="width: 250px;"></div>
+      <p>A partir de: R$ 40,00</p>
+      <button class="btn-comprar">Comprar</button>
+    </div>
+  </div>
+
+<!-- Modal de Produto -->
+<div id="modal-produto" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Produtos no Carrinho</h2>
+    <div id="carrinho-lista" class="modal-body">
+      <!-- Produtos adicionados aparecerão aqui -->
+    </div>
+    <div class="modal-actions">
+      <button id="finalizar-compra" class="modal-btn">Finalizar Compra</button>
+      <button id="cancelar-compra" class="modal-btn">Fechar</button>
+    </div>
+  </div>
+</div>
+
+
+
+  <footer>
+    <p>&copy; 2024 Remedy-Day. Todos os direitos reservados.</p>
+  </footer>
+
+
+
+</body>
 </html>
